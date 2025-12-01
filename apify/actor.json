@@ -1,0 +1,81 @@
+{
+  "actorSpecification": 1,
+  "name": "sportintel-mcp",
+  "title": "SportIntel MCP - AI-Powered Sports Intelligence",
+  "description": "First AI-powered sports analytics MCP server. Get explainable DFS projections, optimize lineups, compare live odds, and understand recommendations with SHAP explainability. Built for Claude & AI agents.",
+  "version": "1.0.0",
+  "meta": {
+    "templateId": "typescript"
+  },
+  "author": {
+    "name": "RoizenLabs",
+    "email": "contact@roizenlabs.com",
+    "url": "https://sportintel.ai"
+  },
+  "license": "MIT",
+  "categories": [
+    "MCP_SERVERS",
+    "SPORTS_ANALYTICS",
+    "AI_TOOLS",
+    "DATA_AGGREGATION"
+  ],
+  "tags": [
+    "mcp",
+    "mcp-server",
+    "sports-analytics",
+    "dfs",
+    "fantasy-sports",
+    "ai",
+    "explainable-ai",
+    "shap",
+    "machine-learning",
+    "betting",
+    "odds",
+    "nba",
+    "nfl"
+  ],
+  "readme": "./README.md",
+  "input": "./INPUT_SCHEMA.json",
+  "dockerfile": "./Dockerfile",
+  "screenshots": [
+    {
+      "url": "https://sportintel.ai/screenshots/projections.png",
+      "title": "AI-Powered Player Projections with SHAP Explainability"
+    },
+    {
+      "url": "https://sportintel.ai/screenshots/lineup-optimizer.png",
+      "title": "Multi-Objective Lineup Optimization"
+    },
+    {
+      "url": "https://sportintel.ai/screenshots/live-odds.png",
+      "title": "Real-Time Odds Aggregation"
+    }
+  ],
+  "links": {
+    "website": "https://sportintel.ai",
+    "github": "https://github.com/roizenlabs/sportintel-mcp",
+    "discord": "https://discord.gg/sportintel",
+    "documentation": "https://docs.sportintel.ai"
+  },
+  "stats": {
+    "avgRunTime": 30,
+    "avgMemoryUsage": 512,
+    "avgCpuUsage": 0.3
+  },
+  "pricing": {
+    "freeTier": {
+      "apiCalls": 100,
+      "description": "Free tier with 100 API calls per day"
+    },
+    "proTier": {
+      "price": 15,
+      "currency": "USD",
+      "period": "month",
+      "apiCalls": 10000,
+      "description": "Pro tier with 10,000 API calls per month"
+    }
+  },
+  "storeFeatured": true,
+  "challengeEntry": true,
+  "challengeCategory": "MCP_SERVERS"
+}

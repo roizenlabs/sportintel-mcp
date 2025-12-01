@@ -1,0 +1,73 @@
+{
+  "title": "SportIntel MCP Input",
+  "type": "object",
+  "schemaVersion": 1,
+  "properties": {
+    "mode": {
+      "title": "Execution Mode",
+      "type": "string",
+      "description": "Run as MCP server (persistent) or batch tool execution (one-time)",
+      "default": "server",
+      "enum": ["server", "batch"],
+      "enumTitles": ["MCP Server (Persistent)", "Batch Execution (One-time)"]
+    },
+    "tool": {
+      "title": "Tool Name",
+      "type": "string",
+      "description": "Tool to execute in batch mode",
+      "editor": "select",
+      "enum": [
+        "get_player_projections",
+        "optimize_lineup",
+        "get_live_odds",
+        "explain_recommendation"
+      ],
+      "enumTitles": [
+        "Player Projections",
+        "Lineup Optimizer",
+        "Live Odds",
+        "Explain Recommendation"
+      ]
+    },
+    "arguments": {
+      "title": "Tool Arguments",
+      "type": "object",
+      "description": "Arguments for the tool (JSON object)",
+      "editor": "json",
+      "prefill": {
+        "sport": "NBA",
+        "slate": "main"
+      }
+    },
+    "oddsApiKey": {
+      "title": "Odds API Key",
+      "type": "string",
+      "description": "Your API key from the-odds-api.com",
+      "editor": "textfield",
+      "isSecret": true
+    },
+    "enableCache": {
+      "title": "Enable Caching",
+      "type": "boolean",
+      "description": "Cache API responses to reduce rate limit usage",
+      "default": true
+    },
+    "cacheTTL": {
+      "title": "Cache TTL (seconds)",
+      "type": "integer",
+      "description": "How long to cache responses",
+      "default": 300,
+      "minimum": 60,
+      "maximum": 3600
+    },
+    "logLevel": {
+      "title": "Log Level",
+      "type": "string",
+      "description": "Logging verbosity",
+      "default": "info",
+      "enum": ["error", "warn", "info", "debug"],
+      "enumTitles": ["Error", "Warning", "Info", "Debug"]
+    }
+  },
+  "required": ["mode"]
+}

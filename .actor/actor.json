@@ -1,0 +1,45 @@
+{
+  "actorSpecification": 1,
+  "name": "sportintel-mcp",
+  "title": "SportIntel MCP - AI Sports Analytics with Injury Risk Detection",
+  "version": "1.2",
+  "description": "🏀 AI-powered sports analytics MCP server with HuggingFace injury risk detection. Get explainable player projections that automatically adjust based on injury sentiment analysis, lineup optimization, and real-time odds from 10+ sportsbooks. Features SHAP AI explanations showing injury factors, value analysis, and multi-bookmaker odds comparison. Perfect for DFS players, sports bettors, and data scientists.",
+  "categories": [
+    "SPORTS",
+    "AI",
+    "ENTERTAINMENT"
+  ],
+  "dockerfile": "./Dockerfile",
+  "input": "./input_schema.json",
+  "readme": "./README.md",
+  "storages": {
+    "dataset": {
+      "actorSpecification": 1,
+      "views": {
+        "overview": {
+          "title": "Player Projections",
+          "transformation": {
+            "fields": [
+              "playerName",
+              "team",
+              "position",
+              "salary",
+              "projectedPoints",
+              "value",
+              "ownership"
+            ]
+          },
+          "display": {
+            "component": "table",
+            "properties": {}
+          }
+        }
+      }
+    }
+  },
+  "environmentVariables": {
+    "BALLDONTLIE_API_KEY": "<your-balldontlie-api-key>",
+    "ODDS_API_KEY": "<your-odds-api-key>",
+    "HUGGINGFACE_API_KEY": "<your-huggingface-api-key>"
+  }
+}

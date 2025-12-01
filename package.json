@@ -1,0 +1,73 @@
+{
+  "name": "@roizenlabs/sportintel-mcp",
+  "version": "1.2.0",
+  "description": "AI-Powered Sports Intelligence MCP Server with HuggingFace Injury Risk Detection - Explainable DFS Projections & Lineup Optimization",
+  "main": "dist/main.js",
+  "type": "module",
+  "scripts": {
+    "start": "tsx src/main.ts",
+    "dev": "tsx watch src/main.ts",
+    "build": "tsc",
+    "test": "vitest",
+    "test:coverage": "vitest --coverage",
+    "lint": "eslint src --ext .ts",
+    "apify:push": "apify push",
+    "apify:run": "apify run",
+    "train-model": "tsx src/models/xgboost-trainer.ts"
+  },
+  "keywords": [
+    "mcp",
+    "mcp-server",
+    "sports-analytics",
+    "dfs",
+    "fantasy-sports",
+    "ai",
+    "explainable-ai",
+    "shap",
+    "machine-learning",
+    "apify",
+    "sportintel",
+    "huggingface",
+    "sentiment-analysis",
+    "injury-detection",
+    "nba",
+    "betting",
+    "odds"
+  ],
+  "author": "RoizenLabs",
+  "license": "MIT",
+  "dependencies": {
+    "@huggingface/inference": "^4.13.3",
+    "@modelcontextprotocol/sdk": "^1.0.4",
+    "apify": "^3.1.10",
+    "axios": "^1.6.0",
+    "date-fns": "^3.0.0",
+    "glpk.js": "^4.0.2",
+    "mathjs": "^12.0.0",
+    "p-limit": "^5.0.0",
+    "zod": "^3.22.4"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "@typescript-eslint/eslint-plugin": "^6.15.0",
+    "@typescript-eslint/parser": "^6.15.0",
+    "@vitest/coverage-v8": "^1.0.4",
+    "apify-cli": "^0.20.0",
+    "dotenv": "^17.2.3",
+    "eslint": "^8.55.0",
+    "tsx": "^4.7.0",
+    "typescript": "^5.3.3",
+    "vitest": "^1.0.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/roizenlabs/sportintel-mcp"
+  },
+  "bugs": {
+    "url": "https://github.com/roizenlabs/sportintel-mcp/issues"
+  },
+  "homepage": "https://sportintel.ai",
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

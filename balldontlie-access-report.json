@@ -1,0 +1,206 @@
+{
+  "timestamp": "2025-11-23T19:05:23.822Z",
+  "apiKey": "d2bc0f1b...",
+  "results": [
+    {
+      "endpoint": "/v1/players",
+      "status": "FAIL",
+      "message": "✗ timeout of 10000ms exceeded"
+    },
+    {
+      "endpoint": "/v1/teams",
+      "status": "PASS",
+      "statusCode": 200,
+      "message": "✓ Success - Got 45 records",
+      "sampleData": {
+        "id": 1,
+        "conference": "East",
+        "division": "Southeast",
+        "city": "Atlanta",
+        "name": "Hawks",
+        "full_name": "Atlanta Hawks",
+        "abbreviation": "ATL"
+      }
+    },
+    {
+      "endpoint": "/v1/games",
+      "status": "PASS",
+      "statusCode": 200,
+      "message": "✓ Success - Got 1 records",
+      "sampleData": {
+        "id": 15907438,
+        "date": "2024-10-22",
+        "season": 2024,
+        "status": "Final",
+        "period": 4,
+        "time": "Final",
+        "postseason": false,
+        "home_team_score": 132,
+        "visitor_team_score": 109,
+        "datetime": "2024-10-22T23:30:00.000Z",
+        "home_q1": 43,
+        "home_q2": 31,
+        "home_q3": 39,
+        "home_q4": 19,
+        "home_ot1": null,
+        "home_ot2": null,
+        "home_ot3": null,
+        "home_timeouts_remaining": 2,
+        "home_in_bonus": false,
+        "visitor_q1": 24,
+        "visitor_q2": 31,
+        "visitor_q3": 32,
+        "visitor_q4": 22,
+        "visitor_ot1": null,
+        "visitor_ot2": null,
+        "visitor_ot3": null,
+        "visitor_timeouts_remaining": 1,
+        "visitor_in_bonus": false,
+        "home_team": {
+          "id": 2,
+          "conference": "East",
+          "division": "Atlantic",
+          "city": "Boston",
+          "name": "Celtics",
+          "full_name": "Boston Celtics",
+          "abbreviation": "BOS"
+        },
+        "visitor_team": {
+          "id": 20,
+          "conference": "East",
+          "division": "Atlantic",
+          "city": "New York",
+          "name": "Knicks",
+          "full_name": "New York Knicks",
+          "abbreviation": "NYK"
+        }
+      }
+    },
+    {
+      "endpoint": "/v1/stats",
+      "status": "PASS",
+      "statusCode": 200,
+      "message": "✓ Success - Got 1 records",
+      "sampleData": {
+        "id": 15531179,
+        "min": "30",
+        "fgm": 7,
+        "fga": 18,
+        "fg_pct": 0.3888889,
+        "fg3m": 5,
+        "fg3a": 9,
+        "fg3_pct": 0.5555556,
+        "ftm": 4,
+        "fta": 4,
+        "ft_pct": 1,
+        "oreb": 2,
+        "dreb": 5,
+        "reb": 7,
+        "ast": 1,
+        "stl": 1,
+        "blk": 0,
+        "turnover": 1,
+        "pf": 3,
+        "pts": 23,
+        "player": {
+          "id": 70,
+          "first_name": "Jaylen",
+          "last_name": "Brown",
+          "position": "G",
+          "height": "6-6",
+          "weight": "223",
+          "jersey_number": "7",
+          "college": "California",
+          "country": "USA",
+          "draft_year": 2016,
+          "draft_round": 1,
+          "draft_number": 3,
+          "team_id": 2
+        },
+        "team": {
+          "id": 2,
+          "conference": "East",
+          "division": "Atlantic",
+          "city": "Boston",
+          "name": "Celtics",
+          "full_name": "Boston Celtics",
+          "abbreviation": "BOS"
+        },
+        "game": {
+          "id": 15907438,
+          "date": "2024-10-22",
+          "season": 2024,
+          "status": "Final",
+          "period": 4,
+          "time": "Final",
+          "postseason": false,
+          "home_team_score": 132,
+          "visitor_team_score": 109,
+          "datetime": "2024-10-22T23:30:00.000Z",
+          "home_q1": 43,
+          "home_q2": 31,
+          "home_q3": 39,
+          "home_q4": 19,
+          "home_ot1": null,
+          "home_ot2": null,
+          "home_ot3": null,
+          "home_timeouts_remaining": 2,
+          "home_in_bonus": false,
+          "visitor_q1": 24,
+          "visitor_q2": 31,
+          "visitor_q3": 32,
+          "visitor_q4": 22,
+          "visitor_ot1": null,
+          "visitor_ot2": null,
+          "visitor_ot3": null,
+          "visitor_timeouts_remaining": 1,
+          "visitor_in_bonus": false,
+          "home_team_id": 2,
+          "visitor_team_id": 20
+        }
+      }
+    },
+    {
+      "endpoint": "/v1/season_averages",
+      "status": "FAIL",
+      "statusCode": 400,
+      "message": "✗ Request failed with status code 400"
+    },
+    {
+      "endpoint": "/v1/box_scores",
+      "status": "FAIL",
+      "statusCode": 400,
+      "message": "✗ Request failed with status code 400"
+    },
+    {
+      "endpoint": "/v1/advanced_stats",
+      "status": "FAIL",
+      "statusCode": 404,
+      "message": "✗ Not found"
+    },
+    {
+      "endpoint": "/v1/nfl/teams",
+      "status": "FAIL",
+      "statusCode": 404,
+      "message": "✗ Not found"
+    },
+    {
+      "endpoint": "/v1/nfl/players",
+      "status": "FAIL",
+      "statusCode": 404,
+      "message": "✗ Not found"
+    },
+    {
+      "endpoint": "/v1/mlb/teams",
+      "status": "FAIL",
+      "statusCode": 404,
+      "message": "✗ Not found"
+    }
+  ],
+  "summary": {
+    "passed": 3,
+    "failed": 7,
+    "rateLimited": 0,
+    "dfsReady": true
+  }
+}

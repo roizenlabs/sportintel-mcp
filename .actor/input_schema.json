@@ -1,0 +1,59 @@
+{
+  "title": "SportIntel MCP Input",
+  "type": "object",
+  "schemaVersion": 1,
+  "properties": {
+    "mode": {
+      "title": "Execution Mode",
+      "type": "string",
+      "description": "Run as MCP server or batch processor",
+      "default": "batch",
+      "enum": [
+        "batch",
+        "server"
+      ],
+      "enumTitles": [
+        "Batch Mode (Execute once and return results)",
+        "Server Mode (Keep running as MCP server)"
+      ],
+      "editor": "select"
+    },
+    "tool": {
+      "title": "Tool to Execute",
+      "type": "string",
+      "description": "Which tool to run (batch mode only)",
+      "default": "get_player_projections",
+      "enum": [
+        "get_player_projections",
+        "optimize_lineup",
+        "get_live_odds",
+        "explain_recommendation"
+      ],
+      "enumTitles": [
+        "Get Player Projections",
+        "Optimize Lineup",
+        "Get Live Odds",
+        "Explain Recommendation"
+      ],
+      "editor": "select"
+    },
+    "arguments": {
+      "title": "Tool Arguments",
+      "type": "object",
+      "description": "Arguments to pass to the tool (batch mode only)",
+      "editor": "json",
+      "default": {
+        "sport": "NBA",
+        "slate": "main"
+      },
+      "prefill": {
+        "sport": "NBA",
+        "slate": "main",
+        "includeExplanations": true
+      }
+    }
+  },
+  "required": [
+    "mode"
+  ]
+}
